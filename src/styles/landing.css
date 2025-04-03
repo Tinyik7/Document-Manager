@@ -1,0 +1,27 @@
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding-top: 70px;
+    background: var(--background-color);
+  }
+  
+  .landing-card {
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+  }
+  
+  .landing-card h2 {
+    margin-bottom: 20px;
+  }
+  
+  .landing-card .ant-btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  

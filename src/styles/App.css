@@ -1,4 +1,37 @@
-.header{
-    margin: 0px;
-    padding: 0px;
-}
+:root {
+    --primary-color: #1F1A38;;
+    --secondary-color: #2e7d32;
+    --accent-color: #ff9800;
+    --background-color: #f9f9f9;
+    --card-background: #ffffff;
+    --text-color: #424242;
+    --font-family: 'Open Sans', sans-serif;
+    --border-radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  .ant-layout {
+    background: var(--background-color);
+  }
+  

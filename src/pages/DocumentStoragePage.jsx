@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Table, Input, Button, Upload, message, Card } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { useDocumentStore } from "../store/useDocumentStore";
+import { useAuthStore } from "../store/useAuthStore";
 import "../styles/DocumentStoragePage.css";
 
 const DocumentStoragePage = () => {
@@ -10,6 +11,7 @@ const DocumentStoragePage = () => {
   const [file, setFile] = useState(null);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const { user } = useAuthStore();
 
   const handleUpload = () => {
     if (!name || !file) {
@@ -36,7 +38,9 @@ const DocumentStoragePage = () => {
       render: (_, record) => (
       <>  
         <Button onClick={() => archiveDocument(record.id)}>Архивировать</Button>
-        <Button onClick={() => removeDocument(record.id)} danger>Удалить</Button>
+        {user && user.role === "admin" && (
+            <Button onClick={() => removeDocument(record.id)} danger>Удалить</Button>
+          )}
       </>
       ),
     },

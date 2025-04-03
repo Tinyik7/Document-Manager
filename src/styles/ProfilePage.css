@@ -2,19 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f2f5;
+  padding-top: 100px;
+  min-height: calc(100vh - 70px);
+  background: var(--background-color);
 }
 
 .profile-card {
+  background: var(--card-background);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 400px;
-  padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
-.logout-button {
+.profile-card .ant-btn {
   margin-top: 15px;
-  width: 100%;
 }

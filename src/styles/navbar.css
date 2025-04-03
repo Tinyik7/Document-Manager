@@ -1,28 +1,44 @@
 .navbar {
+  background: var(--primary-color);
+  padding: 0 30px;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #001529;
-  padding: 0 20px;
-  height: 64px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .menu {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
+  gap: 20px;
 }
 
 .menu-item {
+  color: var(--card-background) !important;
   font-size: 16px;
-  color: #ffffff !important;
+  line-height: 70px;
+  padding: 0 10px;
   transition: color 0.3s;
 }
 
 .menu-item:hover {
-  color: #1890ff !important;
+  color: var(--accent-color) !important;
 }
 
 .profile-button {
-  margin-left: auto;
+  background: var(--card-background) !important;
+  color: var(--primary-color) !important;
+  border: none !important;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-button:hover {
+  background: var(--accent-color) !important;
+  color: var(--card-background) !important;
 }

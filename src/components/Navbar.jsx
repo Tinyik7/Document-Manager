@@ -14,6 +14,9 @@ const Navbar = () => {
     return (
       <Header className="navbar">
         <Menu theme="dark" mode="horizontal" selectable={false} className="menu">
+        <Menu.Item key="home"onClick={() => navigate("/landing")}className="menu-item">
+          Главная
+        </Menu.Item>
           <Menu.Item key="storage" onClick={() => navigate("/storage")} className="menu-item">
             Хранилище
           </Menu.Item>
