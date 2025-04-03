@@ -35,3 +35,6 @@
     background: var(--background-color);
   }
   
+  .ant-menu-dark {
+    background: var(--primary-color);
+  }
