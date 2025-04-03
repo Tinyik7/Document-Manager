@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <ConfigProvider>
-      <BrowserRouter>
+      <HashRouter>
         {user && <Navbar className = "header"/>}
         <Routes>
           <Route path="/" element={<LoginPage />} />
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/profile" element={user ? <ProfilePage /> : <Navigate to="/" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ConfigProvider>
   );
 };
