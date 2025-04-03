@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001529;
+  padding: 0 20px;
+  height: 64px;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  font-size: 16px;
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.menu-item:hover {
+  color: #1890ff !important;
+}
+
+.profile-button {
+  margin-left: auto;
+}
