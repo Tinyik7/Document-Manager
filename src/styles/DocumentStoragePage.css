@@ -1,6 +1,3 @@
-/* DocumentStoragePage.css */
-
-/* Общий фон и отступы */
 .storage-container {
   padding: 60px 30px;
   max-width: 1400px;
@@ -10,7 +7,6 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Секция загрузки: полностью адаптивная и с эффектами */
 .upload-section {
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +38,6 @@
   background-color: #357ab8;
 }
 
-/* Поисковая строка с современным оформлением */
 .search-bar {
   width: 100%;
   max-width: 500px;
@@ -61,7 +56,6 @@
   outline: none;
 }
 
-/* Таблица документов с современными отступами и эффектами */
 .document-table {
   width: 100%;
   border-collapse: separate;
@@ -90,7 +84,6 @@
   border-bottom: 1px solid #e9ecef;
 }
 
-/* Кнопки в таблице */
 .document-table .action-btn {
   background-color: #4a90e2;
   color: #fff;

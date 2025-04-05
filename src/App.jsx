@@ -7,7 +7,7 @@ import DocumentStorage from "./pages/DocumentStoragePage";
 import ArchivePage from "./pages/ArchivePage";
 import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar";
-import {useAuthStore} from "./store/useAuthStore";
+import { useAuthStore } from "./store/useAuthStore";
 import "./styles/App.css";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <ConfigProvider>
       <HashRouter>
-        {user && <Navbar className = "header"/>}
+        {user && <Navbar />}
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/landing" element={user ? <LandingPage /> : <Navigate to="/" />} />
