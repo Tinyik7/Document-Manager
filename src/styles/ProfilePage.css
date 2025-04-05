@@ -1,21 +1,20 @@
+/* src/styles/ProfilePage.css */
+
 .profile-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
-  min-height: calc(100vh - 70px);
-  background: var(--background-color);
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
 }
 
-.profile-card {
-  background: var(--card-background);
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  text-align: center;
+.profile-title {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
-.profile-card .ant-btn {
-  margin-top: 15px;
+.profile-info {
+  font-size: 18px;
+  margin-bottom: 12px;
 }

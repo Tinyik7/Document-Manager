@@ -28,9 +28,6 @@ const ProfilePage = () => {
         <Text strong>Роль: </Text> {user.role === "admin" ? "Администратор" : "Работник"}
         <br />
         <br />
-        <Button type="primary" onClick={() => navigate("/storage")} block>
-          Перейти в хранилище
-        </Button>
         <Button type="primary" danger onClick={logout} block>
           Выйти
         </Button>

@@ -1,0 +1,75 @@
+/* archive.css */
+
+/* Контейнер архива */
+.archive-container {
+  padding: 60px 30px;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Заголовок страницы архива */
+.archive-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #343a40;
+}
+
+/* Таблица архива с современными отступами */
+.archive-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.archive-table thead th {
+  background-color: #f1f3f5;
+  padding: 16px;
+  font-size: 18px;
+  color: #495057;
+  text-align: left;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.archive-table tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+}
+.archive-table tbody tr:hover {
+  transform: translateY(-2px);
+}
+.archive-table tbody td {
+  padding: 16px;
+  font-size: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Кнопки для архива */
+.archive-table .action-btn {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.archive-table .action-btn:hover {
+  background-color: #357ab8;
+}
+.archive-table .restore-btn {
+  background-color: #5cb85c;
+}
+.archive-table .restore-btn:hover {
+  background-color: #4cae4c;
+}
+.archive-table .delete-btn {
+  background-color: #d9534f;
+}
+.archive-table .delete-btn:hover {
+  background-color: #c9302c;
+}

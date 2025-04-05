@@ -1,26 +1,23 @@
+/* src/styles/LoginPage.css */
+
 .login-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: var(--background-color);
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
 }
 
 .login-card {
-  background: var(--card-background);
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 360px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
   text-align: center;
-}
-
-.login-card .ant-input,
-.login-card .ant-input-password {
-  margin-bottom: 15px;
-}
-
-.error-text {
-  color: #f44336;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }

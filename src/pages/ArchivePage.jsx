@@ -18,7 +18,9 @@ const ArchivePage = () => {
     {
       title: "Действия",
       render: (_, record) => (
-        <Button onClick={() => restoreDocument(record.id)}>Восстановить</Button>
+        <Button className="action-btn" onClick={() => restoreDocument(record.id)}>
+          Восстановить
+        </Button>
       ),
     },
   ];
@@ -30,10 +32,16 @@ const ArchivePage = () => {
           placeholder="Поиск по названию"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="search-input"
+          className="search-bar"
         />
       </Card>
-      <Table columns={columns} dataSource={filteredDocuments} pagination={{ pageSize: 10 }} rowKey="key" />
+      <Table
+        columns={columns}
+        dataSource={filteredDocuments}
+        pagination={{ pageSize: 10 }}
+        rowKey="key"
+        className="document-table"
+      />
     </div>
   );
 };
