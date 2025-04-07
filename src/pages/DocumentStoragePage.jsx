@@ -18,11 +18,27 @@ const DocumentStoragePage = () => {
       message.error("Название и файл обязательны!");
       return;
     }
-    addDocument({ name, description, file, date: new Date().toLocaleString() });
+    const newDocument = {
+      id: Date.now(),
+      name,
+      description,
+      file,
+      date: new Date().toLocaleString(),
+    };
+    addDocument(newDocument);
     setName("");
     setDescription("");
     setFile(null);
     message.success("Документ добавлен!");
+  };
+
+  const handleDownload = (file) => {
+    const url = URL.createObjectURL(file);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = file.name;
+    link.click();
+    URL.revokeObjectURL(url);
   };
 
   const filteredDocuments = documents.filter((doc) =>
@@ -37,6 +53,9 @@ const DocumentStoragePage = () => {
       title: "Действия",
       render: (_, record) => (
         <div className="action-buttons">
+          <Button className="action-btn" onClick={() => handleDownload(record.file)}>
+            Скачать
+          </Button>
           <Button className="action-btn" onClick={() => archiveDocument(record.id)}>
             Архивировать
           </Button>
@@ -90,7 +109,7 @@ const DocumentStoragePage = () => {
         columns={columns}
         dataSource={filteredDocuments}
         pagination={{ pageSize: 10 }}
-        rowKey="key"
+        rowKey="id"
         className="document-table"
       />
     </div>

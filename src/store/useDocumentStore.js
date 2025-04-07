@@ -14,6 +14,8 @@ const useDocumentStore = create(
             state.documents.push({
               id: Date.now(),
               name: file.name,
+              description: file.description,
+              file: file.file,
               date: new Date().toLocaleString(),
             });
           })
